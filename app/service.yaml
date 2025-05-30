@@ -4,6 +4,7 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
+  type: LoadBalancer
   selector:
     app: my-app
   ports:

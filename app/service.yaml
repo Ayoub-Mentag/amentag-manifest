@@ -4,11 +4,10 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: my-app
   ports:
     - protocol: TCP
       port: 8888         # This is the port the service exposes inside the cluster
       targetPort: 8888   # This is the port the pod listens on
-      nodePort: 32000    # Optional: external port on the node
